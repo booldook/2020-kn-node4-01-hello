@@ -1,0 +1,23 @@
+{
+  "name": "01.hello",
+  "version": "1.0.0",
+  "description": "- [노드 사이트](https://nodejs.org)\r ## 3. git 설치\r - [git-scm.com](https://git-scm.com)\r ## 4. github 가입\r ## 5. 본인의 컴퓨터에 git 사용자 등록\r - cmd창을 열고\r ```bash\r git config --global user.name 'booldook'\r git config --global user.email 'booldook@gmail.com'\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/booldook/2020-kn-node4-01-hello.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/booldook/2020-kn-node4-01-hello/issues"
+  },
+  "homepage": "https://github.com/booldook/2020-kn-node4-01-hello#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
