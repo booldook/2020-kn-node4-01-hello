@@ -18,6 +18,13 @@
   },
   "homepage": "https://github.com/booldook/2020-kn-node4-01-hello#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "moment": "^2.29.1",
+    "multer": "^1.4.2",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "sequelize": "^6.3.5"
   }
 }
