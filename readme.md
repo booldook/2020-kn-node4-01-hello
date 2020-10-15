@@ -16,5 +16,10 @@ git config --global user.email 'booldook@gmail.com'
 git init
 git remote add origin https://github.com/booldook/2020-kn-node4-01-hello.git
 ```
+## 7. 터미널 창에서 다음과 같이 node프로젝트를 시작한다.
+```bash
+npm init -y
+```
+## 8. root에 package.json 파일이 생성되면 프로젝트 생성이 완료됨.
 
 
