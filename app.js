@@ -6,6 +6,8 @@ app.listen(3000, function(){
 	console.log('http://127.0.0.1:3000');
 });
 
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 app.use('/', express.static(path.join(__dirname, './public')));
 
 app.get('/hello', function(req, res){
@@ -33,4 +35,15 @@ app.get('/sample', function(req, res) {
 app.get('/search', function(req, res) {
 	var q = req.query.q;
 	res.send(`<h1>당신이 요청한 쿼리는 ${q}입니다.</h1>`);
+});
+
+app.get('/user/:id', function(req, res) {
+	var id = req.params.id;
+	res.send(`<h1>안녕하세요! ${id}님</h1>`);
+});
+
+app.post('/join', function(req, res) {
+	var userid = req.body.userid;
+	var userpw = req.body.userpw;
+	res.send(`<h1>${userid} / ${userpw}</h1>`);
 });
