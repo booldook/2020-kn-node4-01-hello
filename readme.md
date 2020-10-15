@@ -11,5 +11,10 @@
 git config --global user.name 'booldook'
 git config --global user.email 'booldook@gmail.com'
 ```
+## 6. 프로젝트 폴더를 만들고 vscode에서 연 다음, git을 설정한다.
+```bash
+git init
+git remote add origin https://github.com/booldook/2020-kn-node4-01-hello.git
+```
 
 
