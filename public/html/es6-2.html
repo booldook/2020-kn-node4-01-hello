@@ -1,0 +1,84 @@
+<script>
+	// 구조분해할당(비구조화할당)
+	const obj = {
+		a: 'A',
+		b: 'B',
+		c: 'C',
+		d: 'D'
+	}
+	var {a, d} = obj;
+	console.log(a, d); 
+
+	// var userid = req.body.userid;
+	// var userpw = req.body.userpw;
+	// var {userid, userpw} = req.body;
+
+	// rest operator(나머지 연산자)/spread operator(펼침 연산자)
+	const fruits = ['apple', 'banana', 'mango'];
+	const fruits2 = ['kiwi', ...fruits, 'orange'];
+	console.log(fruits2);
+
+
+	const newFruits = fruits.concat(fruits2);
+	//console.log(newFruits);
+
+	
+	class Test {
+		constructor(...arg) {
+			this.arg = arg;
+		}
+		print() {
+			console.log(this.arg);
+		}
+	}
+	var test = new Test();
+	var test2 = new Test('A');
+	var test3 = new Test('A', 'B');
+	test.print();
+	test2.print();
+	test3.print();
+
+	function sample(a, b) {
+		var _a = a || 10;
+		var _b = b || 20;
+		console.log(_a + _b);
+	}
+	sample();
+	sample(1);
+	sample(1, 2);
+	
+	function sample2(a=10, b=20) {
+		console.log(a + b);
+	}
+	sample2();
+	sample2(1);
+	sample2(1, 2);
+
+
+	console.clear();
+	// Arrow function
+	function fn(a) {
+		return a * a;
+	}
+	
+	var fn2 = function(a) {
+		return a * a;
+	}
+
+	var fn3 = (a) => { return a * a; }
+	var fn4 = a => a * a;
+
+	console.log(	fn3(5)	);
+	console.log(	fn4(5)	);
+
+
+	var dt = new Date();
+	
+	function zeroPlus(v) {
+		return v < 10 ? '0'+v : v;
+	}
+	console.log(	zeroPlus(dt.getSeconds())	);
+
+	var zeroPlus2 = v => v < 10 ? '0'+v : v;
+	console.log(	zeroPlus2(dt.getSeconds())	);
+</script>
