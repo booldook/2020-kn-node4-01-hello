@@ -1,0 +1,94 @@
+<script>
+
+	var a = 10;
+	//console.log(this);
+	
+	function test() {
+		console.log(this);
+	}
+	//test();
+
+
+	// 함수선언문
+	// Test2();
+	function Test2() {
+		console.log("Test2");
+	}
+
+	// 함수표현식
+	// Test();
+	var Test = function() {
+		console.log("Test");
+	}
+
+	// 생성자 객체
+	function Test3() {
+		return this;
+	}
+
+	var test = new Test3();
+	console.log(test);
+
+
+	// Literal 객체
+	var obj = {
+		a: 10,
+		test: function(){
+			console.log(this);
+		}
+	}
+	var obj2 = obj;
+	obj2.a = 30;
+	console.log(obj2.a);
+	console.log(obj.a);
+
+
+	// 생성자 객체 활용
+	function Car(name) {
+		this.name = name;
+		return this;
+	}
+	Car.prototype.drive = function() {
+		console.log(this.name+ "이(가) 달립니다.");
+	}
+
+	var myCar = new Car("붕붕이");
+	myCar.drive();
+
+	var yourCar = new Car("방방이");
+	yourCar.drive();
+
+
+	// primmitive type
+	var a = 10;
+	var b = a;
+	b = 30;
+	console.log(a, b);
+
+	// Reference type
+	var arr = [1, 2, 3, 4, 5];
+	var arr2 = arr;	//soft copy
+	// var arr2 = arr.slice();	//deep copy
+	arr2[0] = 100;
+	console.log(arr, arr2);
+
+
+
+	// ES6 - 생성자 객체
+	class Car2 {
+		constructor(name) {
+			this.name = name;
+		}
+		drive() {
+			console.log(this.name + "이(가) 달립니다.");
+		}
+	}
+
+	var car = new Car2('뿡뿡이');
+	car.drive();
+
+
+	// 변수
+	// ES5 - var
+	// ES6 - var, let, const
+</script>
